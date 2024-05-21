@@ -203,6 +203,12 @@ body.active { overflow: hidden; }
 
 .h4 { font-size: var(--fs-3); }
 
+/* william */
+.why-us{
+  color: var(--black_95);
+  text-align: center;
+  font-size: var(--fs-1);
+}
 .btn {
   background-color: var(--bg-color, var(--deep-saffron));
   color: var(--white);
@@ -536,7 +542,7 @@ body.active { overflow: hidden; }
 }
 
 .hero-subtitle {
-  color: var(--dark-orange);
+  color: var(--cinnabar);
   font-family: var(--ff-shadows-into-light);
   font-size: var(--fs-3);
   letter-spacing: 1px;
@@ -584,7 +590,7 @@ body.active { overflow: hidden; }
   content: "";
   position: absolute;
   inset: 0;
-  background-color: var(--deep-saffron);
+  background-color: var(--cinnabar);
   clip-path: var(--clip-path-1);
   transform: scaleY(0.3);
   transform-origin: bottom;
@@ -1141,7 +1147,8 @@ body.active { overflow: hidden; }
 .footer { overflow: hidden; }
 
 .footer-top {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
   padding-block: 120px;
   background-repeat: no-repeat;
   background-size: contain;
@@ -1149,19 +1156,6 @@ body.active { overflow: hidden; }
   border-block-end: 2px solid var(--independence_30);
 }
 
-.footer-top::after {
-  content: url(../images/delivery-boy.svg);
-  position: absolute;
-  bottom: -11px;
-  left: -160px;
-  width: 160px;
-  animation: running-cycle 20s linear infinite;
-}
-
-@keyframes running-cycle {
-  0% { left: -160px; }
-  100% { left: 100%; }
-}
 
 .footer-top .container {
   display: grid;
@@ -1223,6 +1217,8 @@ body.active { overflow: hidden; }
   padding: 30px;
   border: 1px solid var(--cultured);
   box-shadow: var(--shadow-2);
+  width: 70%;
+  margin: 0 auto;
 }
 
 .input-wrapper {
@@ -1397,7 +1393,7 @@ textarea.input-field {
   .hero-banner {
     display: block;
     position: absolute;
-    top: calc(50% + 86px);
+    bottom: calc(50% + 56px);
     transform: translateY(-50%);
     right: 50px;
     max-width: 40%;
@@ -1458,37 +1454,6 @@ textarea.input-field {
 
 
 
-  /**
-   * CTA
-   */
-
-  .cta .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 30px;
-  }
-
-  .cta { text-align: left; }
-
-  .cta :is(.section-title, .btn) { margin-inline: 0; }
-
-  .cta-img { transform: scale(1.3) translate(90px, 20px); }
-
-
-
-  /**
-   * DELIVERY
-   */
-
-  .delivery .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 50px;
-  }
-
-
 
   /**
    * BANNER
@@ -1524,6 +1489,9 @@ textarea.input-field {
    */
 
   .input-wrapper { grid-template-columns: 1fr 1fr; }
+  .footer-form {
+   width: 80%;
+  }
 
 }
 
@@ -1615,9 +1583,8 @@ textarea.input-field {
   .hero-text { font-size: var(--fs-3); }
 
   .hero-banner {
-    max-width: 45%;
-    top: auto;
-    bottom: 0;
+    max-width: 38%;
+    bottom: -13%;
     transform: translateY(0);
   }
 
